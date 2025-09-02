@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw7xjjm88ihm6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ogb43"]
+
+[node name="Pixel" type="Area2D"]
+
+[node name="LineColor" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="LineCollider" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_ogb43")

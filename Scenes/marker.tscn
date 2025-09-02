@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxekkftex6ne1"]
+
+[ext_resource type="Script" path="res://Scripts/marker.gd" id="1_8bn7e"]
+[ext_resource type="Texture2D" uid="uid://ducfp75r38d4w" path="res://Assets/Sprites/Marker.png" id="1_bvait"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jelra"]
+radius = 4.08834
+height = 9.91739
+
+[node name="Marker" type="CharacterBody2D"]
+collision_layer = 16
+script = ExtResource("1_8bn7e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.128093, 0.128093)
+texture = ExtResource("1_bvait")
+
+[node name="MainCollider" type="CollisionShape2D" parent="."]
+position = Vector2(-29, 48)
+rotation = 0.514872
+shape = SubResource("CapsuleShape2D_jelra")
+debug_color = Color(0.814435, 0.404055, 0.152886, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+zoom = Vector2(3, 3)
+limit_smoothed = true
