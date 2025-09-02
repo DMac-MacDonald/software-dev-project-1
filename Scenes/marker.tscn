@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxekkftex6ne1"]
+[gd_scene load_steps=5 format=3 uid="uid://dxekkftex6ne1"]
 
 [ext_resource type="Script" path="res://Scripts/marker.gd" id="1_8bn7e"]
 [ext_resource type="Texture2D" uid="uid://ducfp75r38d4w" path="res://Assets/Sprites/Marker.png" id="1_bvait"]
+[ext_resource type="PackedScene" uid="uid://d1b7bnitcp3qy" path="res://Scenes/ui.tscn" id="3_6k2m0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jelra"]
 radius = 4.08834
@@ -25,3 +26,5 @@ debug_color = Color(0.814435, 0.404055, 0.152886, 0.42)
 unique_name_in_owner = true
 zoom = Vector2(3, 3)
 limit_smoothed = true
+
+[node name="UI" parent="Camera2D" instance=ExtResource("3_6k2m0")]

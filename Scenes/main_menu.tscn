@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1emfgxttvv7y"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_mnyjg"]
+[ext_resource type="Texture2D" uid="uid://2oov3an3r2x2" path="res://Assets/Sprites/istockphoto-177509373-612x612.jpg" id="1_qkyb7"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnyjg")
+
+[node name="ButtonContainers" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="ButtonContainers"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="ButtonContainers"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="ButtonContainers"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_qkyb7")
+
+[connection signal="pressed" from="ButtonContainers/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ButtonContainers/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="ButtonContainers/QuitButton" to="." method="_on_quit_button_pressed"]
