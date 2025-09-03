@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dxekkftex6ne1"]
 
-[ext_resource type="Script" path="res://Scripts/marker.gd" id="1_8bn7e"]
+[ext_resource type="Script" uid="uid://b5n3okgivrrjd" path="res://Scripts/marker.gd" id="1_8bn7e"]
 [ext_resource type="Texture2D" uid="uid://ducfp75r38d4w" path="res://Assets/Sprites/Marker.png" id="1_bvait"]
 [ext_resource type="PackedScene" uid="uid://d1b7bnitcp3qy" path="res://Scenes/ui.tscn" id="3_6k2m0"]
 

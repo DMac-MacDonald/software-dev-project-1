@@ -9,7 +9,6 @@ const INK_REGEN = .3
 func _process(delta: float) -> void:
 	if marker.drawing:
 		var pixel = PIXEL.instantiate()
-		print("drawn")
 		add_child(pixel)
 		if Global.ink > 0:
 			Global.ink -= INK_COST

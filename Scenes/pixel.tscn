@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dw7xjjm88ihm6"]
 
-[ext_resource type="Script" path="res://Scripts/pixel.gd" id="1_4kf34"]
+[ext_resource type="Script" uid="uid://lxe4iknfsmd2" path="res://Scripts/pixel.gd" id="1_4kf34"]
 [ext_resource type="Texture2D" uid="uid://be11ovwcobffi" path="res://Assets/Sprites/draw ball1.png" id="1_t6ygl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ogb43"]
@@ -31,7 +31,7 @@ resource_name = "timer"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4vktg"]
 _data = {
-"timer": SubResource("Animation_yovh2")
+&"timer": SubResource("Animation_yovh2")
 }
 
 [node name="Pixel" type="Area2D"]
@@ -49,7 +49,7 @@ animation = &"new_animation"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_4vktg")
+&"": SubResource("AnimationLibrary_4vktg")
 }
 
 [node name="Timer" type="Timer" parent="."]
