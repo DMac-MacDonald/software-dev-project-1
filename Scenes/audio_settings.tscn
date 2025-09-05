@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://b38bnfqnlowb3"]
+
+[ext_resource type="Script" uid="uid://dswf1j6derslu" path="res://Scripts/audio_settings.gd" id="1_dk8vp"]
+
+[node name="AudioSettings" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 56.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+script = ExtResource("1_dk8vp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MasterAudioLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Master: 100%"
+
+[node name="MasterAudioSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.005
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="MusicAudioLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Music: 100%"
+
+[node name="MusicAudioSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.005
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="SfxAudioLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Sfx: 100%"
+
+[node name="SfxAudioSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.005
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+
+[connection signal="value_changed" from="VBoxContainer/MasterAudioSlider" to="." method="_on_master_audio_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/MusicAudioSlider" to="." method="_on_music_audio_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/SfxAudioSlider" to="." method="_on_sfx_audio_slider_value_changed"]
