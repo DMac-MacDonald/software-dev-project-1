@@ -32,4 +32,4 @@ tile_map_data = PackedByteArray("AAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAA
 tile_set = SubResource("TileSet_dw488")
 
 [node name="Marker" parent="." instance=ExtResource("3_4y6ft")]
-position = Vector2(581, 394)
+position = Vector2(589, 370)
