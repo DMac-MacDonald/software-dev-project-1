@@ -6,6 +6,9 @@ var paused: bool = false
 var upgrade_chosen = false
 const INK_COST = 1
 const INK_REGEN = .2
+const LINE_DAMAGE = 2
+const FRUIT_HEALTH = 100
+const MONSTER_HEALTH = 20
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
