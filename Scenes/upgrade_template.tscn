@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceq338r0hwmuw"]
+
+[ext_resource type="Texture2D" uid="uid://dgtcfyvtxhlon" path="res://Assets/Sprites/error.jpg" id="1_inlne"]
+[ext_resource type="Script" uid="uid://bmw5o7nxwlycy" path="res://Scripts/upgrade_template.gd" id="1_npdfo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npdfo"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="UpgradeTemplate" type="MarginContainer"]
+z_index = 1
+y_sort_enabled = true
+custom_minimum_size = Vector2(300, 450)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_npdfo")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_npdfo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+y_sort_enabled = true
+layout_mode = 2
+
+[node name="UpgradePicture" type="TextureRect" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_inlne")
+expand_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Name: Placeholder"
+
+[node name="UpgradeDescription" type="Label" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Description: Placeholder"
+
+[node name="UpgradeButton" type="Button" parent="PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Take Upgrade"
+
+[connection signal="pressed" from="PanelContainer/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
