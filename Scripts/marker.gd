@@ -7,6 +7,7 @@ const ZOOM_RATE = .1
 
 
 @onready var camera:Camera2D = %Camera2D
+@onready var draw_sfx_player: AudioStreamPlayer = $DrawSfxPlayer
 
 var is_moving : bool = false
 var drawing: bool = false
@@ -44,6 +45,8 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed("draw") and Global.ink > 0:
 		drawing = true
+		if draw_sfx_player.playing == false:
+			draw_sfx_player.play()
 	else:
 		drawing = false
 		

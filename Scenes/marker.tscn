@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxekkftex6ne1"]
+[gd_scene load_steps=6 format=3 uid="uid://dxekkftex6ne1"]
 
 [ext_resource type="Script" uid="uid://b5n3okgivrrjd" path="res://Scripts/marker.gd" id="1_8bn7e"]
 [ext_resource type="Texture2D" uid="uid://ducfp75r38d4w" path="res://Assets/Sprites/Marker.png" id="1_bvait"]
 [ext_resource type="PackedScene" uid="uid://d1b7bnitcp3qy" path="res://Scenes/ui.tscn" id="3_6k2m0"]
+[ext_resource type="AudioStream" uid="uid://bp15fpn12mb5g" path="res://Assets/Sfx/drawingSfx.wav" id="4_5e5eh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jelra"]
 radius = 4.08834
@@ -29,3 +30,7 @@ zoom = Vector2(3, 3)
 limit_smoothed = true
 
 [node name="UI" parent="Camera2D" instance=ExtResource("3_6k2m0")]
+
+[node name="DrawSfxPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5e5eh")
+bus = &"Sfx"
