@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 		var pixel = PIXEL.instantiate()
 		add_child(pixel)
 		if Global.ink > 0:
-			Global.ink -= Global.INK_COST
+			Global.ink -= Global.ink_cost
 		pixel.position = marker.position
 	
 	
