@@ -2,15 +2,19 @@ extends MarginContainer
 
 @onready var upgrade_description: Label = $PanelContainer/VBoxContainer/UpgradeDescription
 @onready var upgrade_picture: TextureRect = $PanelContainer/VBoxContainer/UpgradePicture
+@onready var upgrade_name: Label = $PanelContainer/VBoxContainer/UpgradeName
 
 var descriptions = []
+var names = []
 var rng = RandomNumberGenerator.new()
 var randomNum
 func _ready() -> void:
 	load_descriptions()
+	load_names()
 	var random = int(rng.randf_range(0, descriptions.size()-1))
 	randomNum = random
 	upgrade_description.text = descriptions[random]
+	upgrade_name.text = names[random]
 	match random:
 		0:#++width
 			upgrade_picture.texture = preload("res://Assets/Sprites/Line_Width_Up1.png")
@@ -50,3 +54,9 @@ func load_descriptions():
 	while not file.eof_reached(): # iterate through all lines until the end of file is reached
 		var line = file.get_line()
 		descriptions.append(line)
+
+func load_names():
+	var file = FileAccess.open("res://Assets/text files/names.txt", FileAccess.READ)
+	while not file.eof_reached(): # iterate through all lines until the end of file is reached
+		var line = file.get_line()
+		names.append(line)
