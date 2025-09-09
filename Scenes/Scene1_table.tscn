@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://d033jpq4ud38y"]
+[gd_scene load_steps=6 format=4 uid="uid://d033jpq4ud38y"]
 
 [ext_resource type="Script" uid="uid://c1m6ok3ic8wxp" path="res://Scripts/Scene1_table.gd" id="1_aui6a"]
 [ext_resource type="Texture2D" uid="uid://b23dhmd77op17" path="res://Assets/tilesets/table_tileset1.png" id="2_fr8qw"]
 [ext_resource type="PackedScene" uid="uid://dxekkftex6ne1" path="res://Scenes/marker.tscn" id="3_4y6ft"]
-[ext_resource type="Texture2D" uid="uid://ctfarlxmhgrc5" path="res://Assets/Sprites/fruit_basket.png" id="4_l4jyp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yq6v8"]
 texture = ExtResource("2_fr8qw")
@@ -33,13 +32,4 @@ tile_map_data = PackedByteArray("AAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAA
 tile_set = SubResource("TileSet_dw488")
 
 [node name="Marker" parent="." instance=ExtResource("3_4y6ft")]
-<<<<<<< Mitchell
-position = Vector2(580, 220)
-
-[node name="FruitBasket" type="Sprite2D" parent="."]
-position = Vector2(567, 417)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("4_l4jyp")
-=======
 position = Vector2(589, 370)
->>>>>>> main
