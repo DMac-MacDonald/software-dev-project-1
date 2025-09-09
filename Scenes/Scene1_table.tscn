@@ -33,9 +33,13 @@ tile_map_data = PackedByteArray("AAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAA
 tile_set = SubResource("TileSet_dw488")
 
 [node name="Marker" parent="." instance=ExtResource("3_4y6ft")]
+<<<<<<< Mitchell
 position = Vector2(580, 220)
 
 [node name="FruitBasket" type="Sprite2D" parent="."]
 position = Vector2(567, 417)
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("4_l4jyp")
+=======
+position = Vector2(589, 370)
+>>>>>>> main
