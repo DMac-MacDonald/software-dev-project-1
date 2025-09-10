@@ -1,8 +1,7 @@
 extends Node2D
 
 const PIXEL = preload("res://Scenes/pixel.tscn")
-const INK_COST = .4
-const INK_REGEN = .3
+
 @onready var marker: CharacterBody2D = $Marker
 @onready var draw_point: Marker2D = $Marker/DrawPoint
 
@@ -14,10 +13,10 @@ func _process(delta: float) -> void:
 		var pixel = PIXEL.instantiate()
 		add_child(pixel)
 		if Global.ink > 0:
-			Global.ink -= INK_COST
+			Global.ink -= Global.INK_COST
 		pixel.position = marker.position
 	elif Global.ink < 100:
-		Global.ink += INK_REGEN
+		Global.ink += Global.INK_REGEN
 		
 func _input(event):
 	if event.is_action_pressed("pause"):

@@ -105,7 +105,7 @@ scale = Vector2(0.128, 0.128)
 texture = ExtResource("1_bvait")
 
 [node name="MainCollider" type="CollisionShape2D" parent="."]
-position = Vector2(-29, 48)
+position = Vector2(3.8147e-06, 0.999996)
 rotation = 0.514872
 shape = SubResource("CapsuleShape2D_jelra")
 debug_color = Color(0.814435, 0.404055, 0.152886, 0.42)
