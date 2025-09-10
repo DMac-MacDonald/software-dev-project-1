@@ -7,6 +7,11 @@ const ZOOM_RATE = .1
 
 
 @onready var camera:Camera2D = %Camera2D
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
+
+func _ready() -> void:
+	anim_player.play("pulse")
+
 
 var is_moving : bool = false
 var drawing: bool = false
