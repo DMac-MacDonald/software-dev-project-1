@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
 	
-	if Input.is_action_pressed("draw") and Global.ink > 0:
+	if Input.is_action_pressed("draw"):
 		drawing = true
 	else:
 		drawing = false
