@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://d033jpq4ud38y"]
 
-[ext_resource type="Script" uid="uid://c1m6ok3ic8wxp" path="res://Scripts/Scene1_table.gd" id="1_aui6a"]
+[ext_resource type="Script" uid="uid://bg7iyn6dwwly1" path="res://Scripts/node_2d.gd" id="1_aui6a"]
 [ext_resource type="Texture2D" uid="uid://b23dhmd77op17" path="res://Assets/tilesets/table_tileset1.png" id="2_fr8qw"]
 [ext_resource type="PackedScene" uid="uid://dxekkftex6ne1" path="res://Scenes/marker.tscn" id="3_4y6ft"]
 
@@ -22,6 +22,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_yq6v8")
 
 [node name="Scene1_table" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_aui6a")
 
 [node name="Table" type="TileMapLayer" parent="."]
@@ -33,3 +34,9 @@ tile_set = SubResource("TileSet_dw488")
 
 [node name="Marker" parent="." instance=ExtResource("3_4y6ft")]
 position = Vector2(589, 370)
+
+[node name="UpgradeTimerTemp" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="UpgradeTimerTemp" to="." method="_on_upgrade_timer_temp_timeout"]

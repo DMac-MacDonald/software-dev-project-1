@@ -1,20 +1,18 @@
 extends Node2D
 
 const PIXEL = preload("res://Scenes/pixel.tscn")
-const UPGRADE = preload("res://Scenes/upgrade_screen.tscn")
+const INK_COST = .4
+const INK_REGEN = .3
 @onready var marker: CharacterBody2D = $Marker
 @onready var draw_point: Marker2D = $Marker/DrawPoint
-@onready var upgrade_timer_temp: Timer = $UpgradeTimerTemp
 
 func _process(delta: float) -> void:
 	if marker.drawing:
 		var pixel = PIXEL.instantiate()
+		print("drawn")
 		add_child(pixel)
 		if Global.ink > 0:
-			Global.ink -= Global.ink_cost
+			Global.ink -= INK_COST
 		pixel.position = marker.position
-	
-	
-func _on_upgrade_timer_temp_timeout() -> void:
-	var upgrade_screen = UPGRADE.instantiate()
-	add_child(upgrade_screen)
+	elif Global.ink < 100:
+		Global.ink += INK_REGEN

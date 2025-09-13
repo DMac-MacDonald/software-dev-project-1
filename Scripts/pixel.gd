@@ -6,6 +6,10 @@ func _on_timer_timeout() -> void:
 	queue_free()
 
 func _process(delta: float) -> void:
+
 	for body in overlap_area.get_overlapping_bodies():
 		if body.is_in_group("pixels"):
 			queue_free()
+
+	scale.x=Global.width
+	scale.y=Global.width
